@@ -1,0 +1,56 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Näytetään henkilötiedot</title>
+</head>
+<body>
+
+<%
+
+String etunimi = request.getParameter("etunimi");
+String sukunimi = request.getParameter("sukunimi");
+String sposti = request.getParameter("sposti");
+String puhelin = request.getParameter("puhelin");
+String svuosiStr = request.getParameter("svuosi");
+
+int ika = Integer.parseInt(svuosiStr);
+
+
+
+
+out.print("Etunimi on: " + etunimi + "<br>");
+out.print("Sukunimi on: " + sukunimi + "<br>");
+out.print("Sähköposti on: " + sposti + "<br>");
+out.print("Puhelinnumero on: " + puhelin + "<br>");
+out.print("Syntymävuosi on: " + svuosi + "<br>");
+
+
+%>
+
+
+<script>
+$(document).ready(function(){
+	var etunimi = requestURLParam("etunimi");
+	$("#etunimi").text("Etunimi on " + etunimi);
+	
+	var sukunimi = requestURLParam("sukunimi");
+	$("#sukunimi").text("Sukunimi on " + sukunimi);
+	
+	var sposti = requestURLParam("sposti");
+	$("#sposti").text("Sähköposti on " + sposti);
+	
+	var puhelin = requestURLParam("puhelin");
+	$("#puhelin").text("Puhelin on " + puhelin);
+	
+	var svuosi = requestURLParam("svuosi");
+	$("#svuosi").text("Syntymävuosi on " + svuosi);
+	
+});
+</script>
+
+
+</body>
+</html>

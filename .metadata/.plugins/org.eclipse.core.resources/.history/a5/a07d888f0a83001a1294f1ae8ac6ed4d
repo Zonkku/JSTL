@@ -1,0 +1,42 @@
+<%@ page import="java.util.Calendar" @%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+
+<title>Kysytään henkilötiedot</title>
+</head>
+<body>
+
+
+<form action="nayta.jsp" method="POST">
+	<label>Etunimi:</label>
+	<input type="text" name="etunimi"><br>
+	
+	<label>Sukunimi:</label>
+	<input type="text" name="sukunimi"><br>
+	
+	<label>Sähköposti:</label>
+	<input type="text" name="sposti" size="40"><br>
+	
+	<label>Puhelin:</label>
+	<input type="text" name="puhelin"><br>
+	
+	<label>Syntymävuosi:</label>
+	<input type="text" name="sVuosiStr" size="4" maxlength="4"><br>
+	
+	<input type="submit" value="Lähetä">
+</form>
+
+
+</body>
+</html>
+
+
+
+
+
+

@@ -1,0 +1,49 @@
+
+huhtik. 17, 2020 11:09:27.95 NEW SESSION
+huhtik. 17, 2020 11:09:27.96 
+huhtik. 17, 2020 11:09:27.96 ###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+huhtik. 17, 2020 11:09:27.96 
+huhtik. 17, 2020 11:09:27.97 
+huhtik. 17, 2020 11:09:27.97 ###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+huhtik. 17, 2020 11:09:27.97 
+huhtik. 17, 2020 11:39:16.17 
+huhtik. 17, 2020 11:39:16.17 ###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+huhtik. 17, 2020 11:39:16.17 
+huhtik. 17, 2020 11:39:16.19 
+huhtik. 17, 2020 11:39:16.19 ###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+huhtik. 17, 2020 11:39:16.19 
+
+huhtik. 19, 2020 12:15:54.74 NEW SESSION
+huhtik. 19, 2020 12:15:54.74 
+huhtik. 19, 2020 12:15:54.74 ###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+huhtik. 19, 2020 12:15:54.74 
+huhtik. 19, 2020 12:15:54.75 
+huhtik. 19, 2020 12:15:54.75 ###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+huhtik. 19, 2020 12:15:54.75 
+
+huhtik. 20, 2020 16:49:46.67 NEW SESSION
+huhtik. 20, 2020 16:49:46.67 
+huhtik. 20, 2020 16:49:46.67 ###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+huhtik. 20, 2020 16:49:46.67 
+
+huhtik. 21, 2020 10:52:56.06 NEW SESSION
+huhtik. 21, 2020 10:52:56.06 
+huhtik. 21, 2020 10:52:56.06 ###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+huhtik. 21, 2020 10:52:56.07 
+huhtik. 21, 2020 10:52:56.08 
+huhtik. 21, 2020 10:52:56.08 ###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+huhtik. 21, 2020 10:52:56.08 
+huhtik. 21, 2020 10:53:11.09 
+huhtik. 21, 2020 10:53:11.09 ###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+huhtik. 21, 2020 10:53:11.09 
+huhtik. 21, 2020 10:53:11.11 
+huhtik. 21, 2020 10:53:11.11 ###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+huhtik. 21, 2020 10:53:11.11 
+
+huhtik. 22, 2020 15:54:38.21 NEW SESSION
+huhtik. 22, 2020 15:54:38.21 
+huhtik. 22, 2020 15:54:38.21 ###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+huhtik. 22, 2020 15:54:38.21 
+huhtik. 22, 2020 15:54:38.24 
+huhtik. 22, 2020 15:54:38.24 ###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+huhtik. 22, 2020 15:54:38.24 

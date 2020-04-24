@@ -1,0 +1,10 @@
+127.0.0.1 - - [15/Apr/2020:16:12:46 +0300] "GET / HTTP/1.1" 404 709
+0:0:0:0:0:0:0:1 - - [15/Apr/2020:16:14:02 +0300] "GET /OmaEka/NewFile.jsp HTTP/1.1" 200 160328
+127.0.0.1 - - [15/Apr/2020:16:17:10 +0300] "GET / HTTP/1.1" 404 709
+0:0:0:0:0:0:0:1 - - [15/Apr/2020:16:17:17 +0300] "GET /Kommunikaatio/Kysy.jsp HTTP/1.1" 200 136
+0:0:0:0:0:0:0:1 - - [15/Apr/2020:16:17:17 +0300] "GET /favicon.ico HTTP/1.1" 404 720
+0:0:0:0:0:0:0:1 - - [15/Apr/2020:16:31:49 +0300] "GET /Kommunikaatio/Kysy.jsp HTTP/1.1" 200 169
+0:0:0:0:0:0:0:1 - - [15/Apr/2020:16:32:39 +0300] "GET /Kommunikaatio/nayta.jsp? HTTP/1.1" 200 133
+0:0:0:0:0:0:0:1 - - [15/Apr/2020:16:33:07 +0300] "GET /Kommunikaatio/nayta.jsp? HTTP/1.1" 200 133
+0:0:0:0:0:0:0:1 - - [15/Apr/2020:16:33:47 +0300] "GET /Kommunikaatio/Kysy.jsp HTTP/1.1" 200 186
+0:0:0:0:0:0:0:1 - - [15/Apr/2020:16:33:51 +0300] "GET /Kommunikaatio/nayta.jsp?nimi=Jaska&ika=10 HTTP/1.1" 200 133

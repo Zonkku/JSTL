@@ -1,0 +1,7 @@
+INDEX VERSION 1.131
+C:\Users\Lenovo\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\559097465.index
+\OmaEka\src
+C:\Users\Lenovo\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4103283445.index
+\Kommunikaatio\src
+C:\Users\Lenovo\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2993656568.index
+\Asiakkaat\src

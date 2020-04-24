@@ -1,0 +1,40 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+
+<title>Kysytään henkilötiedot</title>
+</head>
+<body>
+
+
+<form action="nayta.jsp" method="POST">
+	<label>Etunimi:</label>
+	<input type="text" name="etunimi" size="20"><br>
+	
+	<label>Sukunimi:</label>
+	<input type="text" name="sukunimi"><br>
+	
+	<label>Sähköposti:</label>
+	<input type="text" name="sposti"><br>
+	
+	<label>Puhelin:</label>
+	<input type="text" name="puhelin"><br>
+	
+	<label>Syntymävuosi:</label>
+	<input type="text" name="sVuosiStr"><br>
+	
+	<input type="submit" value="Lähetä">
+</form>
+
+
+</body>
+</html>
+
+
+
+
+
+

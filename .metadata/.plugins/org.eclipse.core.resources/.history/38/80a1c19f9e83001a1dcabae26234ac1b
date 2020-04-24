@@ -1,0 +1,8 @@
+package asiakastieto.dao;
+import java.sql.Connection;
+
+
+
+public class Dao {
+
+}
