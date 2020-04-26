@@ -7,10 +7,21 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 <title>Insert title here</title>
+<style>
+.oikealle {
+	text-align: right;
+}
+</style>
 </head>
 <body>
 <table id="listaus">
 	<thead>				
+		<tr>
+			<th class="oikealle">Hakusana:</th>
+			<th colspan="2"><input type="text" id="hakusana"></th>
+			<th><input type="button" value="hae" id="hakunappi"></th>
+		</tr>
+		
 		<tr>
 			<th>Asiakastunnus</th>
 			<th>Etunimi</th>
@@ -27,7 +38,24 @@
 
 <script>
 $(document).ready(function(){
-	$.ajax({url:"asiakkaat", type:"GET", dataType:"json", success:function(result){		
+	
+	$ ("#hakunappi").click(function() {
+		console.log($("#hakusana").val());
+		haeAsiakas();
+	});
+	
+	$(document.body).on("keydown", function(event) {
+		if(event.which==13) {
+			haeAsiakas();
+		}
+		
+	});
+	$("#hakusana").focus();
+});	
+
+function haeAsiakas () {
+	$("#listaus tbody").empty();
+	$.ajax({url:"asiakkaat/"+$("#hakusana").val(), type:"GET", dataType:"json", success:function(result){		
 		$.each(result.asiakkaat, function(i, field){  
         	var htmlStr;
         	htmlStr+="<tr>";
@@ -40,7 +68,10 @@ $(document).ready(function(){
         	$("#listaus tbody").append(htmlStr);
         });	
     }});
-});	
+	
+	
+	
+}
 
 </script>
 
