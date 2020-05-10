@@ -7,13 +7,12 @@ public class Asiakas {
 		super();
 		
 	}
-	public Asiakas(String etunimi, String sukunimi, String puhelin, String sposti, int asiakas_id) {
+	public Asiakas(String etunimi, String sukunimi, String puhelin, String sposti) {
 		super();
 		this.etunimi = etunimi;
 		this.sukunimi = sukunimi;
 		this.puhelin = puhelin;
 		this.sposti = sposti;
-		this.asiakas_id = asiakas_id;
 	}
 	public String getEtunimi() {
 		return etunimi;
