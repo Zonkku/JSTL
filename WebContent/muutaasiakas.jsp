@@ -27,91 +27,47 @@
 		</thead>
 		<tbody>
 			<tr>
-				<td><input type="text" name="etunimi" id="etunimi"></td>
-				<td><input type="text" name="sukunimi" id="sukunimi"></td>
-				<td><input type="text" name="puhelin" id="puhelin"></td>
-				<td><input type="text" name="sposti" id="sposti"></td> 
-				<td><input type="submit" id="tallenna" value="Hyv‰ksy"></td>
+				<td><input type="text" name="etunimi" id="etunimi"  value="${asiakas.etunimi}"></td>
+				<td><input type="text" name="sukunimi" id="sukunimi" value="${asiakas.sukunimi}"></td>
+				<td><input type="text" name="puhelin" id="puhelin" value="${asiakas.puhelin}"></td>
+				<td><input type="text" name="sposti" id="sposti" value="${asiakas.sposti}"></td> 
+				<td><input type="button" id="tallenna" value="Hyv‰ksy" onclick="tarkasta()"></td>
 			</tr>
 		</tbody>
 	</table>
-	<input type="hidden" name="asiakas_id" id="asiakas_id">
+	<input type="hidden" name="asiakas_id" id="asiakas_id" value="${asiakas.asiakas_id}">
 		
 </form>
 <span id="ilmo"></span>
 </body>
 <script>
-$(document).ready(function(){
-	$("#takaisin").click(function(){
-		document.location="listaaAsiakkaat.jsp";
-	});
-	//Haetaan muutettavan asiakkaan tiedot.
-	//GET /asiakkaat/haeyksi/asiakas_id
-	var asiakas_id = requestURLParam("asiakas_id");  	
-	$.ajax({url:"asiakkaat/haeyksi/"+asiakas_id, type:"GET", dataType:"json", success:function(result){	
-		
-		$("#asiakas_id").val(result.asiakas_id);
-		$("#etunimi").val(result.etunimi);
-		$("#sukunimi").val(result.sukunimi);
-		$("#puhelin").val(result.puhelin);
-		$("#sposti").val(result.sposti);			
-
-    }});
+function tarkasta(){
 	
-	$("#tiedot").validate({						
-		rules: {
-			etunimi:  {
-				required: true,
-				minlength: 2				
-			},	
-			sukunimi:  {
-				required: true,
-				minlength: 2				
-			},
-			puhelin:  {
-				required: true,
-				minlength: 5
-			},	
-			sposti:  {
-				required: true,
-				email: true
-			}	
-		},
-		messages: {
-			etunimi: {     
-				required: "Puuttuu",
-				minlength: "Liian lyhyt"			
-			},
-			sukunimi: {
-				required: "Puuttuu",
-				minlength: "Liian lyhyt"
-			},
-			puhelin: {
-				required: "Puuttuu",
-				minlength: "Liian lyhyt"
-			},
-			sposti: {
-				required: "Puuttuu",
-				email: "Ei kelpaa",
-			}
-		},			
-		submitHandler: function(form) {	
-			paivitaTiedot();
-		}		
-	}); 	
-});
-//funktio tietojen p‰ivitt‰mist‰ varten. Kutsutaan backin PUT-metodia ja v‰litet‰‰n kutsun mukana uudet tiedot json-stringin‰.
-//PUT /asiakkaat/
-function paivitaTiedot(){	
-	var formJsonStr = formDataJsonStr($("#tiedot").serializeArray()); //muutetaan lomakkeen tiedot json-stringiksi
-	$.ajax({url:"asiakkaat", data:formJsonStr, type:"PUT", dataType:"json", success:function(result) { //result on joko {"response:1"} tai {"response:0"}       
-		if(result.response==0){
-      	$("#ilmo").html("Asiakastietojen p‰ivitt‰minen ep‰onnistui.");
-      }else if(result.response==1){			
-      	$("#ilmo").html("Asiakastietojen p‰ivitt‰minen onnistui.");
-      	$("#etunimi", "#sukunimi", "#puhelin", "#sposti").val("");
-	  }
-  }});	
+	if(document.getElementById("etunimi").value.length<2){
+		document.getElementById("ilmo").innerHTML="Etunimi ei kelpaa!";
+		return;
+	}else if(document.getElementById("sukunimi").value.length<2){
+		document.getElementById("ilmo").innerHTML="Sukunimi ei kelpaa!";
+		return;
+	}else if(document.getElementById("puhelin").value.length<1){
+		document.getElementById("ilmo").innerHTML="Puhelinnumero ei kelpaa!";
+		return;
+	}else if(document.getElementById("sposti").value.length<3){
+		document.getElementById("ilmo").innerHTML="S‰hkˆpostiosoite ei kelpaa!";
+		return;
+	}
+	document.getElementById("etunimi").value=siivoa(document.getElementById("etunimi").value);
+	document.getElementById("sukunimi").value=siivoa(document.getElementById("sukunimi").value);
+	document.getElementById("puhelin").value=siivoa(document.getElementById("puhelin").value);
+	document.getElementById("sposti").value=siivoa(document.getElementById("sposti").value);
+	document.forms["tiedot"].submit();
+}
+
+function siivoa(teksti){
+	teksti=teksti.replace("<","");
+	teksti=teksti.replace(";","");
+	teksti=teksti.replace("'","''");
+	return teksti;
 }
 </script>
 </html>
